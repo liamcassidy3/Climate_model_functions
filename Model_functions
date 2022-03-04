@@ -1,0 +1,34 @@
+def lat_lon_indices(lat_specific, lon_specific, lat_array, lon_array):
+    """Goal is to extract latitude and longitude indices for a specific area provided the values of latitude and longitude
+    
+    Inputs:
+    lat_specific (float): value of latitude for single location, will require looking at the raw lat and lon arrays
+    lon_specific (float): value of longitude for single location, will require looking at the raw lat and lon arrays
+    
+    Returns:
+    lat_index (float): index for requested latitude
+    lon_index (float): index for requested longitude
+    """
+    
+    # Latitude Loop init
+    lat_index = 1
+    lat_eval = 0
+    while lat_eval != lat_specific:
+        lat_index = lat_index +1
+        lat_eval = lat_array[lat_index]
+    print("latitude index =:")
+    print(lat_index)    
+    
+    # Longitude Loop init
+    lon_index = 1
+    lon_eval = 0
+    while lon_eval != lon_specific:
+        lon_index = lon_index +1
+        lon_eval = lon_array[lon_index]
+    print("long index =:")
+    print(lon_index)
+    
+    return lon_index, lat_index
+
+
+
